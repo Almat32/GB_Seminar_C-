@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Astro\\Desktop\\Project\\C#_seminar\\Test1\\Test1.csproj",
+      "projectUniqueName": "C:\\Users\\Astro\\OneDrive\\Рабочий стол\\project\\C#_seminar\\Seminar_001\\Test1.csproj",
       "projectName": "Test1",
-      "projectPath": "C:\\Users\\Astro\\Desktop\\Project\\C#_seminar\\Test1\\Test1.csproj",
+      "projectPath": "C:\\Users\\Astro\\OneDrive\\Рабочий стол\\project\\C#_seminar\\Seminar_001\\Test1.csproj",
       "packagesPath": "C:\\Users\\Astro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Astro\\Desktop\\Project\\C#_seminar\\Test1\\obj\\",
+      "outputPath": "C:\\Users\\Astro\\OneDrive\\Рабочий стол\\project\\C#_seminar\\Seminar_001\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Astro\\AppData\\Roaming\\NuGet\\NuGet.Config"

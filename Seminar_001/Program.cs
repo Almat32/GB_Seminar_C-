@@ -6,6 +6,25 @@ string d = "Hello World"; //  string - строковые данные
 bool e = true // false // bool данные с условием тое есть истина или ложь */
 
 
-Console.Writeline("Введите имя ");
+/* Console.WriteLine("Введите имя ");
 string name = Console.ReadLine();
-Console.Writeline("Hello " + name + 2);
+Console.WriteLine("Hello " + name  + 2);
+int number = Convert.ToInt32(name);
+Console.WriteLine("Hello " + (number  + 2)); */
+
+Console.WriteLine("Введите имя ");
+string name = Console.ReadLine();
+int number = Convert.ToInt32(name);
+int secretNumber = 7;
+if(number > secretNumber)
+{
+    Console.WriteLine("Серктеное число меньше");
+}
+else if(number < secretNumber)
+{
+    Console.WriteLine("Серктеное число больше");
+}
+else
+{
+    Console.WriteLine("Мы угадали");
+}
