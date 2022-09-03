@@ -11,3 +11,8 @@ if(a > b)
     Console.WriteLine("Максимум " + (a));
     Console.WriteLine("Минимум " + (b));
 }
+else
+{
+    Console.WriteLine("Максимум " + (b));
+    Console.WriteLine("Минимум " + (a));
+}
