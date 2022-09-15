@@ -1,16 +1,27 @@
-﻿
+﻿string number ="";
+string numberBack = "";
+int index = 0;
+Console.WriteLine("Введите пяти значное число");
+number = Console.ReadLine();
 
-Console.WriteLine("Введите пятизначное число: ");
-int x = int.Parse(Console.ReadLine());
-
-if( x!= 5)
+while (number.Length > 5)
 {
-    Console.WriteLine("Веденное число не пятизначное");
+    Console.WriteLine("Введенное число имеет больше пяти цифр");
+}
+
+index = number.Length - 1;
+while (index >= 0)
+{
+    numberBack += number.Substring(index, 1);
+    index--;
+}
+
+if (number == numberBack)
+{
+    Console.WriteLine("Это число является палиндромом");
 }
 else
 {
-    for (int i = 0; i <x.Length; i++)
-    {
-        if (x[0] == x[5]);
-    }
+    Console.WriteLine("Это число не является палиндромом");
 }
+Console.WriteLine();
