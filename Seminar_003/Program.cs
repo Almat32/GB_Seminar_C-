@@ -4,7 +4,7 @@ a = Math.Round(a,2); // сколько знаком после запятых
 System.Console.WriteLine(a); */
 
 
-Console.WriteLine("Введите X1: ");
+/* Console.WriteLine("Введите X1: ");
 int x1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите y1: ");
 int y1 = int.Parse(Console.ReadLine());
@@ -14,12 +14,12 @@ Console.WriteLine("Введите y2: ");
 int y2 = int.Parse(Console.ReadLine());
 
 double d = Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2));
-Console.WriteLine($"d={d:f3}");
+Console.WriteLine($"d={d:f3}"); */
 
 // Напишите программу, которая принимает на вход числоо (N)
 // и выдает таблицу квадратов чисел от 1 до N
 
-/* int number = new Random().Next(1,999);
+int number = new Random().Next(1,999);
 int[] array = new int[1];
 for (int i = 1; i < number; i++)
 {
@@ -39,7 +39,7 @@ for (int i = 0; i < array.Length; i++)
 {
     System.Console.WriteLine(array[i]);
 }
- */
+
 
 // Максимальное число в массиве
 /* int[] array = new int[new Random().Next(1,1000)];
