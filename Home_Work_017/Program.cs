@@ -1,6 +1,4 @@
-﻿// Задайте массив заполненный случайными положительными трёхзначными числами.
-// Напишите программу, которая покажет количество чётных
-
+﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 using static System.Console;
 Clear();
@@ -10,21 +8,23 @@ int[] parameter = GetParams(ReadLine());
 int[] array = GetRandomArray(parameter[0]);
 WriteLine(String.Join(", ", array));
 
-int Chet = 0;
-int neChet = 0;
+int max = 0;
+int min = 0;
 for (int i = 0; i < array.Length; i++)
 {
-    if (array[i] % 2 == 0)
+    if (array[i] > max)
     {
-        Chet++;
+        max = array[i];
     }
     else
     {
-        neChet++;
+        min = array[i];
     }
+    
 
 }
-WriteLine($"количество четных чисел = {Chet}, количесвто не четных чисел = {neChet} ");
+int raznica = max - min;
+WriteLine($"Разница между максимальном и минимальным числом: {raznica}");
 
 int[] GetParams(string inString)
 {   
@@ -42,9 +42,8 @@ int[] GetRandomArray(int size)
     int[] result = new int[size];
     for (int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(100,999);
+        result[i] = new Random().Next(0,999);
     }
     return result;
 }
 
-// Как вывести конечный результат подсчета четных не четных чисел ????????

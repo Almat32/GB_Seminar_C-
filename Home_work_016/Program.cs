@@ -1,6 +1,4 @@
-﻿// Задайте массив заполненный случайными положительными трёхзначными числами.
-// Напишите программу, которая покажет количество чётных
-
+﻿// Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
 using static System.Console;
 Clear();
@@ -16,15 +14,15 @@ for (int i = 0; i < array.Length; i++)
 {
     if (array[i] % 2 == 0)
     {
-        Chet++;
+        Chet += array[i];
     }
     else
     {
-        neChet++;
+        neChet += array[i];
     }
 
 }
-WriteLine($"количество четных чисел = {Chet}, количесвто не четных чисел = {neChet} ");
+WriteLine($" Сумма не четных чисел = {neChet} ");
 
 int[] GetParams(string inString)
 {   
@@ -42,9 +40,8 @@ int[] GetRandomArray(int size)
     int[] result = new int[size];
     for (int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(100,999);
+        result[i] = new Random().Next(0,999);
     }
     return result;
 }
 
-// Как вывести конечный результат подсчета четных не четных чисел ????????
