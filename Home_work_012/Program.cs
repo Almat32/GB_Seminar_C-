@@ -48,7 +48,7 @@ for (int i = 0; i < num.Length; i++) // переводит в массив
 
 
 //Суммиует int массив 
-int[] SUM(int[] array)
+int SUM(int[] array)
 {
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
@@ -62,7 +62,7 @@ int[] SUM(int[] array)
 
 int[] IntArray = ConvertArrayToint(numArray);
 int summa = SUM(IntArray);
-WriteArray(SUM);
+WriteArray(int summa);
 
 
 
