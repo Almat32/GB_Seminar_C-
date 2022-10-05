@@ -4,9 +4,9 @@ using static System.Console;
 Clear();
 
 WriteLine("ВВедите номер строки");
-int rows = Convert.ToInt32(Console.ReadLine());
+int rows = Convert.ToInt32(Console.ReadLine())-1;
 WriteLine("ВВедите номер столбца");
-int columns = Convert.ToInt32(Console.ReadLine());
+int columns = Convert.ToInt32(Console.ReadLine())-1;
 int [,]UserArray = new int [rows,columns];
 
 int[,] matrix = new int[3,4];
@@ -19,11 +19,11 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     }
     WriteLine();
 }
-if
+if (rows > matrix.GetLength(0) - 1 | columns > matrix.GetLength(1) - 1)
 {
-    WriteLine("такого адреса нету");
+    WriteLine("такого элемента нету");
 }
 else
 {
-    Console.WriteLine(String.Join(",", rows,columns));
+    WriteLine("Значение элемента = {0}", matrix[rows,columns]);
 }
