@@ -6,8 +6,7 @@ string[,] menu = {{" ","Начать игру"," "},
 string[,] LvlMenu = {{" ","Уровень 1"," "},
                      {" ","Уровень 2"," "},
                      {" ","Уровень 3"," "},
-                     {" ","Уровень 4"," "},
-                     {" ","Назад"," "},};
+                     {" ","Уровень 4"," "},};
 
 string[,] matrix = {{"-","-","-","-","-","-"},
                     {"-","-","-","-","-","-"},
@@ -144,11 +143,12 @@ string[,] ItemFoodMatrix(int x, int y, string[,] array)
 
 bool Barrier(int x, int y)
 {
-    if(y >= matrix.GetLength(1)-1) y = 0;
-    if(y <= 0) y = matrix.GetLength(1);
+   // if(y >= matrix.GetLength(1)-1) y = 0;
+   // if(y <= 0) y = matrix.GetLength(1);
 
-    if(x >= matrix.GetLength(0)-1) x = 0;
-    if(x <= 0) x = matrix.GetLength(0);
+   // if(x >= matrix.GetLength(0)-1) x = 0;
+   // if(x <= 0) x = matrix.GetLength(0);
+       
     if(matrix[y,x] == "|") return false;
     return true;
 }
@@ -175,6 +175,7 @@ while (true)
             break;
     }
 }
+
 void Game()
 {
     while(true)
