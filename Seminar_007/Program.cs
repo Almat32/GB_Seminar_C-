@@ -1,6 +1,13 @@
-﻿string[,] menu = {{" ","Начать игру"," "},
+﻿Console.Clear();
+string[,] menu = {{" ","Начать игру"," "},
                   {" ","Выбор уровня"," "},
-                  {" ","Выходу"," "},};
+                  {" ","Выход"," "},};
+
+string[,] LvlMenu = {{" ","Уровень 1"," "},
+                     {" ","Уровень 2"," "},
+                     {" ","Уровень 3"," "},
+                     {" ","Уровень 4"," "},
+                     {" ","Назад"," "},};
 
 string[,] matrix = {{"-","-","-","-","-","-"},
                     {"-","-","-","-","-","-"},
@@ -8,30 +15,30 @@ string[,] matrix = {{"-","-","-","-","-","-"},
                     {"-","-","-","-","-","-"},
                     {"-","-","-","-","$","-"},
                     {"-","-","-","-","-","-"},};
-Dictionary<int, string[,]> Lvls = new Dictionary<int, string[,]>{{1,
+Dictionary<int, string[,]> Lvls = new Dictionary<int, string[,]>{{0,
 new string[,]{{"-","-","-","-","-","-"},
               {"-","-","-","-","-","-"},
               {"-","|","@","-","-","-"},
               {"-","-","-","-","-","-"},
               {"-","-","-","-","$","-"},
               {"-","-","-","-","-","-"}}},
-              {2,
+              {1,
 new string[,]{{"-","-","-","-","-","-"},
               {"-","-","|","-","-","-"},
               {"-","|","@","-","-","-"},
               {"-","-","-","-","-","-"},
               {"-","-","-","-","$","-"},
               {"-","-","-","-","-","-"}}},
-              {3,
+              {2,
 new string[,]{{"-","-","-","-","-","-"},
               {"-","-","-","-","-","-"},
               {"-","|","@","-","-","-"},
               {"-","|","-","-","-","-"},
               {"-","|","-","-","$","-"},
               {"-","-","-","-","-","-"}}},
-              {4,
+              {3,
 new string[,]{{"-","-","-","-","|","-"},
-              {"-","-","-","-","|","-"},
+              {"-","-","-","-","-","-"},
               {"-","|","@","-","-","-"},
               {"-","|","-","-","-","-"},
               {"-","|","-","-","$","-"},
@@ -40,7 +47,7 @@ new string[,]{{"-","-","-","-","|","-"},
 int coins = 0;
 int MenuX = 0;
 int MenuY = 0;
-int SelectLvlGame()
+/* int SelectLvlGame()
 {
     Console.Clear();
     Console.WriteLine("Введите уровень");
@@ -50,7 +57,34 @@ int SelectLvlGame()
     }
     Console.WriteLine();
     return int.Parse(Console.ReadLine());
+} */
+
+int SelectLvlGame()
+{   
+    int indexMenu = 1;
+    MatrixWrite(LvlMenu);
+    ConsoleKeyInfo User_keyTab = Console.ReadKey();
+    while(User_keyTab.Key != ConsoleKey.Enter)
+    {
+        Console.Clear();
+        LvlMenu[MenuY,MenuX] = " ";
+        if(User_keyTab.Key == ConsoleKey.W && indexMenu > 0)
+        {
+            indexMenu--;
+            MenuY--;
+        }
+        if(User_keyTab.Key == ConsoleKey.S && indexMenu < 4)
+        {
+            indexMenu++;
+            MenuY++;
+        }
+        LvlMenu[MenuY,MenuX] = "@";
+        MatrixWrite(LvlMenu);
+        User_keyTab = Console.ReadKey();
+    }
+    return indexMenu;
 }
+
 int SelectMenuPlayer()
 {   
     int indexMenu = 0;
